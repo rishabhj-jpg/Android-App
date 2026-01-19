@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_inbox"
+        android:title="@string/menu_inbox"
+        android:icon="@drawable/ic_inbox"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/menu_refresh_ads"
+        android:title="Refresh Ads"
+        android:icon="@drawable/ic_refresh"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/menu_logout"
+        android:title="@string/menu_logout"
+        app:showAsAction="never" />
+
+</menu>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TestApp"
+        tools:targetApi="31">
+
+        <!-- Add your CleverTap credentials here -->
+        <meta-data
+            android:name="CLEVERTAP_ACCOUNT_ID"
+            android:value="RKR-ZZ7-ZR7Z" />
+        <meta-data
+            android:name="CLEVERTAP_TOKEN"
+            android:value="a11-232" />
+        <meta-data
+            android:name="CLEVERTAP_REGION"
+            android:value="eu1" /> <!-- e.g., eu1, us1, sg1, etc. -->
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.TestApp.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".PlayerDetailActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TestApp.NoActionBar" />
+
+        <!-- Inbox Activity (has Toolbar) -->
+        <activity
+            android:name=".InboxActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TestApp.NoActionBar" />
+        <!-- CleverTap Push Notification Services -->
+        <service
+            android:name="com.clevertap.android.sdk.pushnotification.fcm.FcmMessageListenerService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.clevertap.android.sdk.pushnotification.CTPushNotificationReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.clevertap.intent.ACTION_BOOT_COMPLETED" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+            </intent-filter>
+        </receiver>
+
+
+    </application>
+
+</manifest>

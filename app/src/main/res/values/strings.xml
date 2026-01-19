@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Man City FC App</string>
+    <string name="app_logo">Manchester City Logo</string>
+    <string name="player_image">Player Image</string>
+
+    <!-- Menu items -->
+    <string name="menu_inbox">Inbox</string>
+    <string name="menu_logout">Logout</string>
+
+    <!-- Player details -->
+    <string name="player_details">Player Details</string>
+    <string name="rating">Rating</string>
+    <string name="position">Position</string>
+    <string name="nationality">Nationality</string>
+    <string name="jersey_number">Jersey Number</string>
+</resources>

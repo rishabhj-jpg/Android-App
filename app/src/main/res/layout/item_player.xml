@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:background="@drawable/card_background"
+    android:layout_margin="4dp">
+
+    <ImageView
+        android:id="@+id/imagePlayer"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/ic_player_placeholder"
+        android:scaleType="centerCrop"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/player_image" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textPlayerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Player Name"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/textPosition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Position"
+            android:textSize="14sp"
+            android:textColor="@color/gray_dark"
+            android:layout_marginTop="2dp" />
+
+        <TextView
+            android:id="@+id/textNationality"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nationality"
+            android:textSize="14sp"
+            android:textColor="@color/gray_dark"
+            android:layout_marginTop="2dp" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:stepSize="0.1"
+            android:rating="4.5"
+            android:isIndicator="true"
+            android:layout_marginTop="4dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textJerseyNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="#9"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/blue_dark"
+        android:padding="8dp"
+        android:background="@drawable/jersey_background" />
+
+</LinearLayout>
